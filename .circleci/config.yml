@@ -1,9 +1,10 @@
-working_directory: /app
+version: 2.1
+jobs:
+  build:
     machine:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: |
-             echo "Getting dependencies"
+          name: "Testing"
+          command: echo "Hi"
