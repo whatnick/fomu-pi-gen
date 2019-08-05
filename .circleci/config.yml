@@ -6,9 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Testing"
+          name: "Building Raspberry Pi Image"
           command: |
               sudo modprobe binfmt-misc
+              sudo apt-get install apt-utils
+              sudo apt install qemu
               ./run-build-docker.sh
               ls ./deploy
               cp ./deploy/Fomu-Dev-*.zip Fomu-Dev-latest.zip
