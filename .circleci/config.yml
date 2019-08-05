@@ -10,3 +10,8 @@ jobs:
           command: |
               sudo modprobe binfmt-misc
               ./run-build-docker.sh
+              cp ./deploy/Fomu-Dev-*.zip Fomu-Dev-latest.zip
+
+      - store_artifacts:
+          path: Fomu-Dev-latest.zip
+          destination: Fomu-Dev
