@@ -7,4 +7,6 @@ jobs:
       - checkout
       - run:
           name: "Testing"
-          command: sudo modprobe binfmt-misc
+          command: |
+		sudo modprobe binfmt-misc
+		./run-build-docker.sh
